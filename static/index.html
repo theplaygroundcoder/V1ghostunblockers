@@ -22,18 +22,11 @@
       const titles = ["Ghost Unblocked", "#1 Fastest Unblocker"];
       let index = 0;
       function changeTitle() {
-        if (!sessionStorage.getItem("customTitle")) {
-          document.title = titles[index];
-          index = (index + 1) % titles.length;
-        }
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
       }
       setInterval(changeTitle, 5000);
     });
-
-    function setCustomTitle(title) {
-      document.title = title;
-      sessionStorage.setItem("customTitle", title);
-    }
   </script>
 </head>
 <body>
