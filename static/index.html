@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="/assets/css/menu.css?v=3">
   <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?v=3"></script>
   <script src="/assets/js/anym.js?v=3"></script>
-  <title>Ghost Unblocker</title>
+  
+  <!-- Remove the static title tag from here, we are managing it via JS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YEQ7Q0XRC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,11 +31,11 @@
         index = (index + 1) % titles.length;
       }
 
-      // Start changing title every 5 seconds
-      setInterval(changeTitle, 5000);
-      
-      // Set default title immediately
+      // Set the title immediately
       changeTitle(); // Make sure the title starts as "Ghost Unblocker"
+
+      // Change title every 5 seconds
+      setInterval(changeTitle, 5000);
     });
   </script>
 
