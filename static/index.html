@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
@@ -18,57 +18,54 @@
     gtag('config', 'G-6YEQ7Q0XRC');
   </script>
 
-  <!-- Add the dynamic title changing script -->
+  <!-- Title change script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Titles to switch between
       const titles = ["Ghost Unblocker", "#1 Fastest Unblocker"];
       let index = 0;
-
-      // Function to update the title
+      
+      // Function to change title
       function changeTitle() {
         document.title = titles[index];
         index = (index + 1) % titles.length;
       }
 
-      // Change title every 5 seconds
+      // Start changing title every 5 seconds
       setInterval(changeTitle, 5000);
-
-      // Initial title
-      document.title = "Ghost Unblocker"; // Default title for all pages
+      
+      // Set default title immediately
+      changeTitle(); // Make sure the title starts as "Ghost Unblocker"
     });
   </script>
+
 </head>
 <body>
-  <script src="/baremux/index.js?v=3"></script>
-  <script src="/wk/wk2.js?v=3"></script>
-  <script src="/wk/wk3.js?v=3"></script>
+  <!-- Your content goes here -->
+  
   <nav id="mytopnav">
     <button class="btn-main" anim="ripple" onclick="send('/settings.html')"><i class="bi bi-gear" style="font-size:30px;"></i>Settings</button>
     <button class="btn-main" anim="ripple" onclick="send('/gms')"><i class="bi bi-joystick" style="font-size:30px;"></i>Games</button>
     <button class="btn-main" anim="ripple" onclick="send('/apps')"><i class="bi bi-grid-fill" style="font-size:30px;"></i>Apps</button><br>
     <a href="/" class="title" anim="ripple"><img src="/assets/img/ghost-logo.jpg" style="width:22px;height:22px;" id="logo"> Ghost Unblocker</a>
   </nav>
+
   <div style="text-align:center;color:white;margin-top: 80px;z-index:1;" class="themesExcluded">
     <div class="themesExcluded">
       <i class="bi bi-search search" id="search"></i>
       <form method="POST" id="uform" autocomplete="off" class="themesExcluded" style="z-index:1;">
         <input type="text" name="url" class="browse-input themesExcluded" style="font-family:poppins;font-size:20px;z-index:1;" placeholder="Type URL or search query"><p class="splashText themesExcluded" id="placeholder"></p>
       </form>
+    </div>
     <div class="bottom-right-content themesExcluded">
-    <a href="/info">Site Info</a>
-  </div>
+      <a href="/info">Site Info</a>
+    </div>
 
-  <div id="user-count" style="position: fixed; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px;">
-    Active Users: <span id="count">0</span>
+    <script src="/assets/js/main.js?v=3"></script>
+    <script src="/assets/js/index.js?v=3"></script>
+    <script src="/assets/js/themes.js?v=3"></script>
+    <script src="/assets/js/particles.js?v=3"></script>
+    <script src="/assets/js/register.js?v=3" defer></script>
+    <script type='text/javascript' src='//cogentselfish.com/a1/87/68/a187684b9f023e7b2684450a755b623e.js'></script>
   </div>
-
-  <script src="/assets/js/main.js?v=3"></script>
-  <script src="/assets/js/index.js?v=3"></script>
-  <script src="/assets/js/themes.js?v=3"></script>
-  <script src="/assets/js/particles.js?v=3"></script>
-  <script src="/assets/js/register.js?v=3" defer></script>
-  <script type='text/javascript' src='//cogentselfish.com/a1/87/68/a187684b9f023e7b2684450a755b623e.js'></script>
-</div>
 </body>
 </html>
