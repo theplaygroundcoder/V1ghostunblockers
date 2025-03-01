@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/assets/css/menu.css?v=3">
   <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?v=3"></script>
   <script src="/assets/js/anym.js?v=3"></script>
-  <title>Ghost Unblocker</title> <!-- Static title placeholder -->
+  <title>Ghost Unblocker</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YEQ7Q0XRC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,17 +17,25 @@
     gtag('js', new Date());
     gtag('config', 'G-6YEQ7Q0XRC');
   </script>
-  <script>
-    // Store the title in localStorage on the homepage
-    if (window.location.pathname === '/') {
-      localStorage.setItem('pageTitle', 'Ghost Unblocker');  // Store title for all pages
-    }
 
-    // Override the page title on every page using the stored title
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const storedTitle = localStorage.getItem('pageTitle');
-      if (storedTitle) {
-        document.title = storedTitle;  // Override title across all pages
+      // Initializing titles
+      const titles = ["Ghost Unblocker", "#1 Fastest Unblocker"];
+      let index = 0;
+
+      // Function to change the title
+      function changeTitle() {
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
+      }
+
+      // Change title every 5 seconds
+      setInterval(changeTitle, 5000);
+
+      // Make sure the title is set to "Ghost Unblocker" when the page is loaded
+      if (window.location.pathname === '/') {
+        document.title = "Ghost Unblocker";  // Initial page load title
       }
     });
   </script>
@@ -51,6 +59,7 @@
     <div class="bottom-right-content themesExcluded">
     <a href="/info">Site Info</a>
   </div>
+
   <div id="user-count" style="position: fixed; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px;">
     Active Users: <span id="count">0</span>
   </div>
