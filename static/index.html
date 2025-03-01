@@ -18,9 +18,17 @@
     gtag('config', 'G-6YEQ7Q0XRC');
   </script>
   <script>
-    // Override title on all pages
+    // Store the title in localStorage on the homepage
+    if (window.location.pathname === '/') {
+      localStorage.setItem('pageTitle', 'Ghost Unblocker');  // Store title for all pages
+    }
+
+    // Override the page title on every page using the stored title
     document.addEventListener("DOMContentLoaded", function () {
-      document.title = "Ghost Unblocker";  // Ensure the title is set to "Ghost Unblocker" on every page load
+      const storedTitle = localStorage.getItem('pageTitle');
+      if (storedTitle) {
+        document.title = storedTitle;  // Override title across all pages
+      }
     });
   </script>
 </head>
