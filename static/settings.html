@@ -34,7 +34,6 @@
       <i class="bi bi-gear"></i> View all Settings
     </div>
   </div>
-
   <nav id="mytopnav">
     <button class="btn-main active" anim="ripple">
       <i class="bi bi-gear" style="font-size:30px;"></i>Settings
@@ -47,10 +46,9 @@
     </button><br>
     <a href="/" class="title" anim="ripple">
       <img src="/assets/img/ghost-logo.png" style="width:22px;height:22px;" id="logo"> 
-      <span id="dynamic-branding">Ghost Unblocker</span>
+      Ghost Unblocker
     </a>    
   </nav>
-
   <br>
   <div class="containers" id="settingsContainer">
     <div class="settingscontainer"><br>
@@ -74,25 +72,24 @@
         </button>
       </div>
     </div>
-    <!-- More settings containers here -->
+    <!-- Other settings sections here -->
+
+    <div class="settingscontainer"><br>
+      <p style="font-weight: bold;">Tab Ghost Unblocker</p>
+      <p>Enable or disable the Ghost Unblocker tab effect.</p>
+      <div class="button-container themesExcluded" style="margin:0;height:115px;background-color:transparent;background:none;">
+        <button class="option button-container centered-button themesExcluded" id="ghostCloak" anim="ripple" onclick="enableGhostCloak()">
+          <img src="/assets/img/ghost-logo.png" style="width:30px;height:30px;">
+        </button>
+        <button class="option button-container centered-button themesExcluded" id="ghostCloak" anim="ripple" onclick="disableGhostCloak()">
+          <img src="/assets/img/none.webp" style="width:30px;height:30px;">
+        </button>
+      </div>
+    </div>
 
   </div>
-
   <script src="/assets/js/themes.js?v=3"></script>
   <script src="/assets/js/settings.js?v=3"></script>
   <script src="/assets/js/main.js?v=3"></script>
-
-  <script>
-    let brandingTexts = ["Ghost Unblocker", "Unblock Any Site", "Fast & Secure Browsing", "Online Freedom"];
-    let brandingElement = document.getElementById("dynamic-branding");
-    let currentTextIndex = 0;
-
-    function changeBrandingText() {
-      brandingElement.innerText = brandingTexts[currentTextIndex];
-      currentTextIndex = (currentTextIndex + 1) % brandingTexts.length;
-    }
-
-    setInterval(changeBrandingText, 5000); // Change text every 5 seconds
-  </script>
 </body>
 </html>
