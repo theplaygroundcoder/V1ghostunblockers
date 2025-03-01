@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/assets/css/menu.css?v=3">
   <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?v=3"></script>
   <script src="/assets/js/anym.js?v=3"></script>
-  <title>Ghost Unblocker</title> <!-- Static title here -->
+  <title>Ghost Unblocker</title> <!-- Static title placeholder -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YEQ7Q0XRC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,15 +18,9 @@
     gtag('config', 'G-6YEQ7Q0XRC');
   </script>
   <script>
+    // Override title on all pages
     document.addEventListener("DOMContentLoaded", function () {
-      const titles = ["Ghost Unblocker", "#1 Fastest Unblocker"];
-      let index = 0;
-      function changeTitle() {
-        document.title = titles[index];
-        index = (index + 1) % titles.length;
-      }
-      changeTitle(); // Change title right away on load
-      setInterval(changeTitle, 5000); // Alternating titles every 5 seconds
+      document.title = "Ghost Unblocker";  // Ensure the title is set to "Ghost Unblocker" on every page load
     });
   </script>
 </head>
@@ -34,12 +28,12 @@
   <script src="/baremux/index.js?v=3"></script>
   <script src="/wk/wk2.js?v=3"></script>
   <script src="/wk/wk3.js?v=3"></script>
-<nav id="mytopnav">
-  <button class="btn-main" anim="ripple" onclick="send('/settings.html')"><i class="bi bi-gear" style="font-size:30px;"></i>Settings</button>
-  <button class="btn-main" anim="ripple" onclick="send('/gms')"><i class="bi bi-joystick" style="font-size:30px;"></i>Games</button>
-  <button class="btn-main" anim="ripple" onclick="send('/apps')"><i class="bi bi-grid-fill" style="font-size:30px;"></i>Apps</button><br>
-  <a href="/" class="title" anim="ripple"><img src="/assets/img/ghost-logo.jpg" style="width:22px;height:22px;" id="logo"> Ghost Unblocker</a> <!-- Redirect to home page -->
-</nav>
+  <nav id="mytopnav">
+    <button class="btn-main" anim="ripple" onclick="send('/settings.html')"><i class="bi bi-gear" style="font-size:30px;"></i>Settings</button>
+    <button class="btn-main" anim="ripple" onclick="send('/gms')"><i class="bi bi-joystick" style="font-size:30px;"></i>Games</button>
+    <button class="btn-main" anim="ripple" onclick="send('/apps')"><i class="bi bi-grid-fill" style="font-size:30px;"></i>Apps</button><br>
+    <a href="/" class="title" anim="ripple"><img src="/assets/img/ghost-logo.jpg" style="width:22px;height:22px;" id="logo"> Ghost Unblocker</a>
+  </nav>
   <div style="text-align:center;color:white;margin-top: 80px;z-index:1;" class="themesExcluded">
     <div class="themesExcluded">
       <i class="bi bi-search search" id="search"></i>
@@ -49,8 +43,6 @@
     <div class="bottom-right-content themesExcluded">
     <a href="/info">Site Info</a>
   </div>
-
-  <!-- Active User Count Display -->
   <div id="user-count" style="position: fixed; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px;">
     Active Users: <span id="count">0</span>
   </div>
