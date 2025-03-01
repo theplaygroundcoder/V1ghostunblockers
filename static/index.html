@@ -18,13 +18,14 @@
     gtag('config', 'G-6YEQ7Q0XRC');
   </script>
 
+  <!-- Add the dynamic title changing script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Initializing titles
+      // Titles to switch between
       const titles = ["Ghost Unblocker", "#1 Fastest Unblocker"];
       let index = 0;
 
-      // Function to change the title
+      // Function to update the title
       function changeTitle() {
         document.title = titles[index];
         index = (index + 1) % titles.length;
@@ -33,10 +34,8 @@
       // Change title every 5 seconds
       setInterval(changeTitle, 5000);
 
-      // Make sure the title is set to "Ghost Unblocker" when the page is loaded
-      if (window.location.pathname === '/') {
-        document.title = "Ghost Unblocker";  // Initial page load title
-      }
+      // Initial title
+      document.title = "Ghost Unblocker"; // Default title for all pages
     });
   </script>
 </head>
