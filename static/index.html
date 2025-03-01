@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/assets/css/menu.css?v=3">
   <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js?v=3"></script>
   <script src="/assets/js/anym.js?v=3"></script>
-  <title>Ghost Unblocker</title>
+  <title>Ghost Unblocker</title> <!-- Static title here -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YEQ7Q0XRC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,8 +25,8 @@
         document.title = titles[index];
         index = (index + 1) % titles.length;
       }
-      changeTitle(); // Change the title immediately when the page is loaded
-      setInterval(changeTitle, 5000); // Then change it every 5 seconds
+      changeTitle(); // Change title right away on load
+      setInterval(changeTitle, 5000); // Alternating titles every 5 seconds
     });
   </script>
 </head>
@@ -38,7 +38,7 @@
   <button class="btn-main" anim="ripple" onclick="send('/settings.html')"><i class="bi bi-gear" style="font-size:30px;"></i>Settings</button>
   <button class="btn-main" anim="ripple" onclick="send('/gms')"><i class="bi bi-joystick" style="font-size:30px;"></i>Games</button>
   <button class="btn-main" anim="ripple" onclick="send('/apps')"><i class="bi bi-grid-fill" style="font-size:30px;"></i>Apps</button><br>
-  <a href="#" class="title" anim="ripple"><img src="/assets/img/ghost-logo.jpg" style="width:22px;height:22px;" id="logo"> Ghost Unblocker</a>    
+  <a href="/" class="title" anim="ripple"><img src="/assets/img/ghost-logo.jpg" style="width:22px;height:22px;" id="logo"> Ghost Unblocker</a> <!-- Redirect to home page -->
 </nav>
   <div style="text-align:center;color:white;margin-top: 80px;z-index:1;" class="themesExcluded">
     <div class="themesExcluded">
